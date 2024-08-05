@@ -14,6 +14,8 @@
 		431002B02C5CB76C00107586 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431002AF2C5CB76C00107586 /* NetworkManager.swift */; };
 		431002B42C5CB7AD00107586 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 431002B32C5CB7AD00107586 /* RxSwift */; };
 		431002B62C5CB7B100107586 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 431002B52C5CB7B100107586 /* RxCocoa */; };
+		43A44A852C60997500ADF614 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A842C60997500ADF614 /* Pokemon.swift */; };
+		43A44A872C60999100ADF614 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A862C60999100ADF614 /* PokemonDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		431002A22C5CB54200107586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431002A42C5CB54200107586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431002AF2C5CB76C00107586 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		43A44A842C60997500ADF614 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		43A44A862C60999100ADF614 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		431002AB2C5CB66F00107586 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43A44A842C60997500ADF614 /* Pokemon.swift */,
+				43A44A862C60999100ADF614 /* PokemonDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				431002B02C5CB76C00107586 /* NetworkManager.swift in Sources */,
+				43A44A852C60997500ADF614 /* Pokemon.swift in Sources */,
+				43A44A872C60999100ADF614 /* PokemonDetail.swift in Sources */,
 				4310029B2C5CB54100107586 /* MainViewController.swift in Sources */,
 				431002972C5CB54100107586 /* AppDelegate.swift in Sources */,
 			);
