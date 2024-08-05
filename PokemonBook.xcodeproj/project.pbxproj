@@ -16,6 +16,7 @@
 		431002B62C5CB7B100107586 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 431002B52C5CB7B100107586 /* RxCocoa */; };
 		43A44A852C60997500ADF614 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A842C60997500ADF614 /* Pokemon.swift */; };
 		43A44A872C60999100ADF614 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A862C60999100ADF614 /* PokemonDetail.swift */; };
+		43A44A892C60A1F100ADF614 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A882C60A1F100ADF614 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		431002AF2C5CB76C00107586 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		43A44A842C60997500ADF614 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		43A44A862C60999100ADF614 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
+		43A44A882C60A1F100ADF614 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		431002AA2C5CB63800107586 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4310029A2C5CB54100107586 /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,7 +97,7 @@
 		431002AD2C5CB69600107586 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4310029A2C5CB54100107586 /* MainViewController.swift */,
+				43A44A882C60A1F100ADF614 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				43A44A872C60999100ADF614 /* PokemonDetail.swift in Sources */,
 				4310029B2C5CB54100107586 /* MainViewController.swift in Sources */,
 				431002972C5CB54100107586 /* AppDelegate.swift in Sources */,
+				43A44A892C60A1F100ADF614 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
