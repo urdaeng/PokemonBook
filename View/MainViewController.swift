@@ -128,4 +128,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         return cell
     }
+    
+    // 셀을 눌렀을 때 동작 지정
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        navigationController?.pushViewController(detailViewController, animated: false)
+    }
 }

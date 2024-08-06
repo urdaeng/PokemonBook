@@ -19,6 +19,7 @@
 		43A44A892C60A1F100ADF614 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A882C60A1F100ADF614 /* MainViewModel.swift */; };
 		43A44A8B2C61CD9E00ADF614 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A8A2C61CD9E00ADF614 /* CollectionViewCell.swift */; };
 		43A44A8E2C6200D500ADF614 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 43A44A8D2C6200D500ADF614 /* SnapKit */; };
+		43A44A922C621BCD00ADF614 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A912C621BCD00ADF614 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		43A44A862C60999100ADF614 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 		43A44A882C60A1F100ADF614 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43A44A8A2C61CD9E00ADF614 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		43A44A912C621BCD00ADF614 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				4310029A2C5CB54100107586 /* MainViewController.swift */,
 				43A44A8A2C61CD9E00ADF614 /* CollectionViewCell.swift */,
+				43A44A912C621BCD00ADF614 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				4310029B2C5CB54100107586 /* MainViewController.swift in Sources */,
 				431002972C5CB54100107586 /* AppDelegate.swift in Sources */,
 				43A44A892C60A1F100ADF614 /* MainViewModel.swift in Sources */,
+				43A44A922C621BCD00ADF614 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
