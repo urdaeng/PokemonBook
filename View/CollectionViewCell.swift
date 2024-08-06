@@ -13,7 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .darkGray
+        imageView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 235/255, alpha: 1.0)
         imageView.layer.cornerRadius = 10   // 모서리 부분이 조금 동그랗게 깍이도록 설정
         imageView.clipsToBounds = true      // 깍여진 부분을 imageView도 함께 깍여줄 수 있게 해주는 속성
         return imageView
@@ -21,6 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         contentView.addSubview(imageView)
         imageView.frame = contentView.bounds
     }
@@ -34,24 +35,28 @@ class CollectionViewCell: UICollectionViewCell {
         imageView.image = nil       // 셀이 재사용되기 전에 이전에 설정된 이미지를 제거
     }
     
-    func configure(with pokemonDetail: PokemonDetail) {
-        guard let pokemonId = pokemonDetail.id else { return }
+    func configure(with pokemon: Pokemon) {
+        guard let pokemonId = pokemon.id else { return }
         // 없다면 return
         let urlString = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(pokemonId).png"
         // 포케몬 이미지 URL
         guard let url = URL(string: urlString) else { return }
         // 이거를 url 타입으로 바꾸도록.
         
+        // URL 세션을 사용해서 이미지 데이터 가져오기
         DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-            // url로부터 이미지 데이터를 가져오는 코드
+            do {
+                let data = try Data(contentsOf: url)
+                // url로부터 이미지 데이터를 가져오는 코드
                 if let image = UIImage(data: data) {
-                // 잘 받았다면 UIImage 객체로 변환
+                    // 잘 받았다면 UIImage 객체로 변환
                     DispatchQueue.main.async {
                         // 메인 스레드를 활용
                         self?.imageView.image = image
                     }
                 }
+            } catch {
+                print("이미지 로드 실패: \(error)")
             }
         }
     }
