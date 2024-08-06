@@ -20,4 +20,10 @@ struct Pokemon: Codable {
     let name: String?          // 포켓몬 이름
     let url: String?           // 포켓몬 상세 정보를 얻기 위한 URL
     
+    var id: Int? {
+        // URL에서 Pokemon ID 추출
+        guard let urlString = url else { return 0 }
+        let components = urlString.split(separator: "/")
+        return Int(components[components.count - 1]) ?? 0
+    }
 }
