@@ -20,6 +20,8 @@
 		43A44A8B2C61CD9E00ADF614 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A8A2C61CD9E00ADF614 /* CollectionViewCell.swift */; };
 		43A44A8E2C6200D500ADF614 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 43A44A8D2C6200D500ADF614 /* SnapKit */; };
 		43A44A922C621BCD00ADF614 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A912C621BCD00ADF614 /* DetailViewController.swift */; };
+		43A44AB82C6330DB00ADF614 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44AB72C6330DB00ADF614 /* DetailViewModel.swift */; };
+		43A44ABA2C6331FC00ADF614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44AB92C6331FC00ADF614 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		43A44A882C60A1F100ADF614 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43A44A8A2C61CD9E00ADF614 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		43A44A912C621BCD00ADF614 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		43A44AB72C6330DB00ADF614 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		43A44AB92C6331FC00ADF614 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				43A44A882C60A1F100ADF614 /* MainViewModel.swift */,
+				43A44AB72C6330DB00ADF614 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				431002AF2C5CB76C00107586 /* NetworkManager.swift */,
+				43A44AB92C6331FC00ADF614 /* Color.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -207,7 +213,9 @@
 				431002B02C5CB76C00107586 /* NetworkManager.swift in Sources */,
 				43A44A852C60997500ADF614 /* Pokemon.swift in Sources */,
 				43A44A872C60999100ADF614 /* PokemonDetail.swift in Sources */,
+				43A44ABA2C6331FC00ADF614 /* Color.swift in Sources */,
 				43A44A8B2C61CD9E00ADF614 /* CollectionViewCell.swift in Sources */,
+				43A44AB82C6330DB00ADF614 /* DetailViewModel.swift in Sources */,
 				4310029B2C5CB54100107586 /* MainViewController.swift in Sources */,
 				431002972C5CB54100107586 /* AppDelegate.swift in Sources */,
 				43A44A892C60A1F100ADF614 /* MainViewModel.swift in Sources */,
