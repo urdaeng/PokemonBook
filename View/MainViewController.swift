@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         // 컬렉션뷰셀을 등록.
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = UIColor(red: 120/255, green: 30/255, blue: 30/255, alpha: 1.0)
+        collectionView.backgroundColor = .darkRed
         return collectionView
     }()
     
@@ -91,7 +91,7 @@ class MainViewController: UIViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = UIColor(red: 190/255, green: 30/255, blue: 40/255, alpha: 1.0)
+        view.backgroundColor = .mainRed
         [
             logo,
             collectionView
@@ -131,7 +131,12 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     // 셀을 눌렀을 때 동작 지정
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailViewController = DetailViewController()
-        navigationController?.pushViewController(detailViewController, animated: true)
+            let selectedPokemon = pokemonSubject[indexPath.item]
+            
+            let detailViewModel = DetailViewModel(pokemonId: selectedPokemon.id ?? 0)
+            let detailViewController = DetailViewController(pokemonId: selectedPokemon.id ?? 0)
+            
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
-}
+
