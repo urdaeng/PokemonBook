@@ -131,12 +131,26 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     // 셀을 눌렀을 때 동작 지정
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let selectedPokemon = pokemonSubject[indexPath.item]
-            
-            let detailViewModel = DetailViewModel(pokemonId: selectedPokemon.id ?? 0)
-            let detailViewController = DetailViewController(pokemonId: selectedPokemon.id ?? 0)
-            
-            navigationController?.pushViewController(detailViewController, animated: true)
+        let selectedPokemon = pokemonSubject[indexPath.item]
+        
+        let detailViewModel = DetailViewModel(pokemonId: selectedPokemon.id ?? 0)
+        let detailViewController = DetailViewController(pokemonId: selectedPokemon.id ?? 0)
+        
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    // UIScrollView가 스크롤될 때 호출되는 메서드
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentHeight = scrollView.contentSize.height       // 스크롤 뷰의 전체(추가되는) 컨텐츠 영역의 높이 
+        print("contentHeight: \(contentHeight)")
+        let scrollViewHeight = scrollView.frame.size.height     // 스크롤 뷰의 화면 크기
+        print("scrollViewHeight: \(scrollViewHeight)")
+        let offsetY = scrollView.contentOffset.y                // 스크롤 뷰에서 현재 내려진 스크롤 위치
+        print("offsetY: \(offsetY)")
+        
+        if offsetY > contentHeight - scrollViewHeight * 2 {
+            viewModel.fetchPokemon()
         }
     }
+}
 
