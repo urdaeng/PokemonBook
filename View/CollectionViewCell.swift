@@ -13,7 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 235/255, alpha: 1.0)
+        imageView.backgroundColor = .cellBackground
         imageView.layer.cornerRadius = 10   // 모서리 부분이 조금 동그랗게 깍이도록 설정
         imageView.clipsToBounds = true      // 깍여진 부분을 imageView도 함께 깍여줄 수 있게 해주는 속성
         return imageView
