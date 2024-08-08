@@ -9,7 +9,7 @@ import Foundation
 
 // 구조체 생성
 struct PokemonDetail: Codable {
-    let order: Int?                 // 아이디
+    let id: Int?                    // 아이디
     let name: String?               // 이름
     let types: [Types]?             // 타입
     let height: Double?             // 키

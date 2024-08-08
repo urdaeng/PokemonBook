@@ -22,6 +22,7 @@
 		43A44A922C621BCD00ADF614 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44A912C621BCD00ADF614 /* DetailViewController.swift */; };
 		43A44AB82C6330DB00ADF614 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44AB72C6330DB00ADF614 /* DetailViewModel.swift */; };
 		43A44ABA2C6331FC00ADF614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44AB92C6331FC00ADF614 /* Color.swift */; };
+		43A44ABC2C647D9C00ADF614 /* PokemonTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A44ABB2C647D9C00ADF614 /* PokemonTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		43A44A912C621BCD00ADF614 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		43A44AB72C6330DB00ADF614 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		43A44AB92C6331FC00ADF614 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		43A44ABB2C647D9C00ADF614 /* PokemonTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				43A44A842C60997500ADF614 /* Pokemon.swift */,
 				43A44A862C60999100ADF614 /* PokemonDetail.swift */,
+				43A44ABB2C647D9C00ADF614 /* PokemonTranslator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				431002972C5CB54100107586 /* AppDelegate.swift in Sources */,
 				43A44A892C60A1F100ADF614 /* MainViewModel.swift in Sources */,
 				43A44A922C621BCD00ADF614 /* DetailViewController.swift in Sources */,
+				43A44ABC2C647D9C00ADF614 /* PokemonTranslator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

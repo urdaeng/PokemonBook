@@ -93,10 +93,12 @@ class DetailViewController: UIViewController {
                 
                 // 필터링하여 ID와 일치하는 정보만 추출
                 guard let pokemonId = self?.detailViewModel.pokemonId else { return }
+                print("아이디: \(pokemonId)")
                 
-                if detail.order == pokemonId {
+                if detail.id == pokemonId {
                     // UI 업데이트
                     self?.updateUI(with: detail)
+                    print("정보: \(detail)")
                 }
             }, onError: { error in
                 print("에러 발생: \(error)")
@@ -104,12 +106,17 @@ class DetailViewController: UIViewController {
     }
     
     private func updateUI(with detail: PokemonDetail) {
+        // 포케몬 이름을 한국어로 변환
+        let koreanName = PokemonTranslator.getKoreanName(for: detail.name!)
         //UI를 업데이트.
-        self.nameLabel.text = "No.\(detail.order!)  \(detail.name!)"
+        self.nameLabel.text = "No.\(detail.id!)  \(koreanName)"
+            
+        // 타입 배열을 한국어로 변환
+        let typeNames = detail.types?.compactMap { $0
+            return PokemonTypeName(rawValue: $0.type.name)?.displayName
+        }.joined(separator: ", ") ?? "알수없음"
         
-        // `types` 배열을 문자열로 변환하여 `typeLabel`에 표시
-        let types = detail.types?.map { $0.type.name }.joined(separator: ", ") ?? "Unknown"
-        typeLabel.text = "Type: \(types)"
+        typeLabel.text = "타입: \(typeNames)"
         
         let height = detail.height ?? 0
         let weight = detail.weight ?? 0
@@ -119,7 +126,7 @@ class DetailViewController: UIViewController {
         weightLabel.text = String(format: "Weight: %.1f kg", weight * 0.1)
         
         // 포켓몬 이미지 URL을 UIImageView에 업데이트
-        if let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(detail.order ?? 0).png") {
+        if let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(detail.id ?? 0).png") {
             // URL 세션을 사용해서 이미지 데이터 가져오기
             DispatchQueue.global().async { [weak self] in
                 do {
