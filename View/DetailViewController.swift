@@ -93,7 +93,6 @@ class DetailViewController: UIViewController {
                 
                 // 필터링하여 ID와 일치하는 정보만 추출
                 guard let pokemonId = self?.detailViewModel.pokemonId else { return }
-                print("아이디: \(pokemonId)")
                 
                 if detail.id == pokemonId {
                     // UI 업데이트
